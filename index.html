@@ -62,7 +62,7 @@
               </h1>
               <p>Ваши обои в руках профессионалов</p>
             </div>
-            <form class="hero-form" id="contactForm">
+            <form onsubmit="EmailSend(event)" class="hero-form" id="contactForm">
               <input
                 class="hero-form__num-input"
                 type="text"
@@ -216,22 +216,42 @@
                 <p class="portfolio-text">Поклейка обоев</p>
               </div>
 
-              <div class="portfolio-card">
+              <div class="portfolio-card" onclick="openModal()">
                 <img src="images/Image.png" alt="card-img1" />
-                <p class="portfolio-text">Поклейка обоев</p>
+                <p class="portfolio-text">Поклейка фресок</p>
               </div>
               <div class="portfolio-card">
                 <img src="images/Image-1.png" alt="card-img2" />
-                <p class="portfolio-text">Поклейка обоев</p>
+                <p class="portfolio-text">Покраска стен и потолков</p>
               </div>
               <div class="portfolio-card">
                 <img src="images/Image-2.png" alt="card-img2" />
-                <p class="portfolio-text">Поклейка обоев</p>
+                <p class="portfolio-text">Сопутствующие работы</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
+      <div class="portfolio-gallery" onclick="openModal()">
+        <div class="gallery-in">
+          <img src="images/portfolio/photo_2024-11-30 16.12.19.jpeg" alt="Фото 13">
+          <img src="images/portfolio/2024-11-13 11.47.49.jpg" alt="Фото 2">
+          <img src="images/portfolio/2024-11-13 11.48.17.jpg" alt="Фото 3">
+          <img src="images/portfolio/2024-11-13 11.48.21.jpg" alt="Фото 4">
+          <img src="images/portfolio/2024-11-13 11.48.27.jpg" alt="Фото 5">
+          <img src="images/portfolio/2024-11-13 11.48.31.jpg" alt="Фото 6">
+          <img src="images/portfolio/2024-11-13 11.48.38.jpg" alt="Фото 7">
+          <img src="images/portfolio/2024-11-13 11.48.46.jpg" alt="Фото 8">
+          <img src="images/portfolio/2024-11-13 11.49.04.jpg" alt="Фото 9">
+          <img src="images/portfolio/2024-11-13 11.49.10.jpg" alt="Фото 10">
+          <img src="images/portfolio/2024-11-13 11.49.17.jpg" alt="Фото 11">
+          <img src="images/portfolio/2024-11-13 11.49.42.jpg" alt="Фото 12">
+          <img src="images/portfolio/photo_2024-11-30 16.12.50.jpeg" alt="Фото 14">
+          <img src="images/portfolio/photo_2024-11-30 16.12.59.jpeg" alt="Фото 15">
+          <img src="images/portfolio/photo_2024-11-30 16.13.03.jpeg" alt="Фото 16">
+        </div>
+      </div>
       <section class="about-exp">
         <div class="container">
           <div class="exp-in">
@@ -364,7 +384,7 @@
               <div class="top--left-box bottom--right-box">
                 <img src="images/section11.png" alt="section2" />
                 <a href="#portfolio" class="left-box--up">
-                  Поклейка универсальным клеем 
+                    Поклейка специальным клеем
                   <img style="width: 16px;" src="images/icons/Arrow 1.png" alt="arrow">
                 </a>
               </div>
@@ -572,9 +592,20 @@
     </main>
     <footer>
       <div class="container">
-        <h4>Все права защищены. Информация на сайте не является публичной офертой. Нажимая кнопку «Отправить заявку», вы соглашаетесь с условиями обработки персональных данных. ООО «Перфекто»; ИНН 7700000000; емайл для связи: mail@.ru</h4>
+        <h4>Все права защищены. Информация на сайте не является публичной офертой. Нажимая кнопку «Отправить заявку», вы соглашаетесь с <a href="#">условиями</a> обработки персональных данных. ИП Абрамова Д.С ИНН 246504850312; емайл для связи: <a href="email:Dina.master2024@яндекс">Dina.master2024@яндекс</a></h4>
       </div>
     </footer>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "0-4Y8Yo73zzKWb15U",
+      });
+   })();
+</script>
+
     <script src="js/script.js"></script>
   </body>
 </html>
