@@ -193,7 +193,7 @@
               </div>
             </div>
 
-            <form class="hero-form" id="contactForm">
+            <form onsubmit="EmailSend(event)" class="hero-form" id="contactForm">
               <input
                 class="hero-form__num-input"
                 type="text"
@@ -423,7 +423,7 @@
             <p>
               Позвоните нам по телефону +7 (950)-998-68-89 или оставьте заявку. Мы с заботой на них ответим
             </p>
-            <form class="hero-form" id="contactForm">
+            <form onsubmit="EmailSend(event)" class="hero-form" id="contactForm">
               <input
                 class="hero-form__num-input"
                 type="text"
@@ -474,7 +474,7 @@
                 <p class="const-card-info">Грунтовка</p>
               </div>
             </div>
-            <button class="hero-form__btn cost-btn" type="submit">Оставить заявку</button>
+            <a href="#section1" style="display: flex; justify-content: center; align-items: center;" class="hero-form__btn cost-btn" type="submit">Оставить заявку</a>
           </div>
         </div>
       </section>
@@ -530,7 +530,7 @@
             <p>Доверьте поклейку обоев нам. <br> Мы сделаем это быстро, качественно и с заботой о вашем комфорте</p>
             </div>
             <div class="last-right">
-              <form class="hero-form" id="contactForm">
+              <form onsubmit="EmailSend(event)" class="hero-form" id="contactForm">
               <p>Оставьте номер, и мы свяжемся с вами в самое ближайшее время</p>
               <input
                 class="hero-form__num-input"

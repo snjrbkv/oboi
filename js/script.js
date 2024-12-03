@@ -12,9 +12,12 @@ function formatPhone(input) {
 })();
 
 async function sendForm(event) {
-  const phoneInput = document.querySelector(".hero-form__num-input").value;
   event.preventDefault();
-  if (!phoneInput.trim() || phoneInput.length < 18) {
+
+  const form = event.target;
+  const phoneInput = form.querySelector(".hero-form__num-input");
+
+  if (!phoneInput.value.trim() || phoneInput.value.length < 18) {
     alert("Введите корректный номер телефона!");
     return;
   }
@@ -23,7 +26,7 @@ async function sendForm(event) {
     const response = await emailjs.send("service_87ptpxi", "template_2m0exo2", {
       to_name: "Команда",
       from_name: "Клиент",
-      message: `Номер телефона: ${phoneInput}`,
+      message: `Номер телефона: ${phoneInput.value}`,
     });
     alert("Сообщение успешно отправлено!");
     phoneInput.value = "";
@@ -31,6 +34,11 @@ async function sendForm(event) {
     alert("Ошибка при отправке сообщения: " + error.text);
   }
 }
+
+// Привязка обработчика события ко всем формам
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", sendForm);
+});
 
 document.getElementById("contactForm").addEventListener("submit", sendForm);
 function openModal() {
