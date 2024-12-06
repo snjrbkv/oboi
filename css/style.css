@@ -32,6 +32,7 @@ button {
 }
 body {
   background-color: #1d302d;
+  overflow-x: hidden;
 }
 /* header */
 header {
@@ -234,19 +235,28 @@ input[type="text"]::placeholder {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  font-family: "Cormorant Garamond", serif;
 
   position: relative;
   margin: 0;
-}
-.advantages-text h2::before {
-  content: "";
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 269px;
-  height: 18px;
-  background-color: #219653;
-  z-index: -2;
+  span {
+    position: relative;
+    font-family: Cormorant Garamond;
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 64px;
+  }
+  span::before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    background-color: #219653;
+    z-index: -2;
+  }
 }
 .advantages-text h3 {
   font-family: Cormorant Garamond;
@@ -315,15 +325,17 @@ input[type="text"]::placeholder {
 }
 .connect-in {
   width: 100%;
-  background-image: url("../images/benefits.png");
+  background-image: url("../images/cta.png");
   height: 392px;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  background-size: cover;
+  background-size: contain;
   justify-content: center;
+  background-size: cover;
   flex-direction: column;
   border-radius: 50px;
+  background-position: top left;
 }
 .connect-cards {
   display: flex;
@@ -402,7 +414,7 @@ input[type="text"]::placeholder {
 .portfolio-cards {
   margin-top: 40px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 40px;
 }
@@ -413,6 +425,7 @@ input[type="text"]::placeholder {
   text-align: center;
   img {
     width: 100%;
+    height: 300px !important;
     object-fit: cover;
   }
   p {
@@ -423,8 +436,24 @@ input[type="text"]::placeholder {
     line-height: 33.6px;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    display: flex;
+    justify-content: space-between;
+    span {
+      cursor: pointer;
+    }
   }
 }
+#current-image {
+  opacity: 0;
+  transition: all 0.5s ease-in-out; /* Плавное исчезновение и появление */
+  filter: blur(2px);
+}
+
+#current-image.active {
+  opacity: 1;
+  filter: blur(0px);
+}
+
 /* exp */
 .about-exp {
   margin-top: 80px;
@@ -617,9 +646,9 @@ input[type="text"]::placeholder {
       font-family: Cormorant Garamond;
       font-size: 54px;
       font-style: italic;
+      width: 50%;
       font-weight: 500;
       line-height: 54px;
-      display: block;
       text-decoration: none !important;
     }
     span::before {
@@ -627,7 +656,7 @@ input[type="text"]::placeholder {
       position: absolute;
       bottom: -3px;
       left: 0;
-      width: 50%;
+      width: 100%;
       height: 18px;
       background-color: #219653;
       z-index: -2;
@@ -785,7 +814,7 @@ input[type="text"]::placeholder {
 }
 .cost-card {
   width: 30%;
-  height: 125px;
+  height: 130px;
   background-color: #32564a;
   display: flex;
   align-items: center;
@@ -793,7 +822,7 @@ input[type="text"]::placeholder {
   justify-content: center;
   gap: 16px;
   .cost-card-text {
-    padding: 16px 24px;
+    padding: 13px 22px;
     border: 1px solid #e1e3e3;
     border-radius: 50px;
     font-family: Roboto;
@@ -821,6 +850,7 @@ input[type="text"]::placeholder {
     width: 50%;
     img {
       width: 100%;
+      height: 530px;
       border-radius: 20px 0 0 20px;
     }
   }
@@ -1018,12 +1048,15 @@ footer {
     .advantages-box,
     .image-box {
       width: 100% !important;
+      height: 218px;
     }
     .image-box {
       transform: translateY(0);
       img {
         width: 100% !important;
         height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
       }
     }
   }
@@ -1048,14 +1081,32 @@ footer {
 }
 @media only screen and (max-width: 968px) {
   h2 {
-    font-size: 32px !important;
+    font-size: 42px !important;
     text-align: left !important;
-    line-height: 32px !important;
+    line-height: 45px !important;
     span {
-      font-size: 32px !important;
-      line-height: 32px !important;
+      font-size: 42px !important;
+      line-height: 45px !important;
       text-align: left !important;
     }
+  }
+  .advantages {
+    margin-top: 10px;
+  }
+  .advantages-text {
+    width: 100%;
+    margin-top: 0px !important;
+    display: flex;
+    flex-direction: row !important;
+  }
+  p {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 300 !important;
+    line-height: 22.4px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
   }
   .advantages-text > h3 {
     font-size: 50px !important;
@@ -1095,6 +1146,7 @@ footer {
     flex-direction: column;
     padding: 24px 8px;
     height: auto !important;
+    background-position: center;
   }
 
   .hero-text {
@@ -1220,6 +1272,9 @@ footer {
     width: 100% !important;
     justify-content: space-between;
     padding: 0 5%;
+    .cost-card-text {
+      padding: 15px 21px;
+    }
   }
 
   .card p {

@@ -9,6 +9,9 @@
       content="Поклейка обоев в Красноярске от 5 часов за комнату с оплатой по факту выполненных работ"
     />
     <meta name="keywords" content="обои в красноярске" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>mastery</title>
   </head>
   <body>
@@ -21,21 +24,21 @@
                 <img src="images/logo.png" alt="website logo" />
               </li>
               <li class="navigation-list__item">
-                <a href="#" class="navigation-list__link">
+                <a href="https://wa.me/79509986889?text=Hi" target="_blank" class="navigation-list__link">
                   <img src="images/icons/whatsapp.png" alt="whatsapp" />
                   <p>whatsapp</p>
                 </a>
-                <a href="#" class="navigation-list__link">
+                <a href="https://t.me/+79509986889" target="_blank" class="navigation-list__link">
                   <img src="images/icons/telegram.png" alt="telegram" />
                   <p>telegram</p>
                 </a>
               </li>
               <li class="navigation-list__item">
                 <div class="navigation-list__icons">
-                  <a href="#" class="navigation-last__icons">
+                  <a href="https://wa.me/79509986889?text=Hi" class="navigation-last__icons" target="_blank">
                     <img src="images/icons/whatsapp.png" alt="whatsapp" />
                   </a>
-                  <a href="#" class="navigation-last__icons">
+                  <a href="https://t.me/+79509986889" class="navigation-last__icons" target="_blank">
                     <img src="images/icons/telegram.png" alt="telegram" />
                   </a>
                 </div>
@@ -106,8 +109,7 @@
         <div class="container">
           <div class="advantages-in">
             <div class="advantages-text">
-              <h2>Наши</h2>
-              <h3>преимущества</h3>
+              <h2><span>Наши</span> преимущества</h2>
             </div>
             <div class="advantages-boxes">
               <div class="advantages-box">
@@ -216,9 +218,11 @@
                 <p class="portfolio-text">Поклейка обоев</p>
               </div>
 
-              <div class="portfolio-card" onclick="openModal()">
-                <img src="images/Image.png" alt="card-img1" />
-                <p class="portfolio-text">Поклейка фресок</p>
+              <div class="portfolio-card" >
+                <div class="portfolio-card--images">
+                  <img class="active" src="images/portfolio/photo.jpeg" alt="card-img1" id="current-image"/>
+                </div>
+                <p class="portfolio-text"><span id="prevBtn"><</span>  Поклейка фресок <span id="nextBtn">></span></p>
               </div>
               <div class="portfolio-card">
                 <img src="images/Image-1.png" alt="card-img2" />
@@ -232,26 +236,6 @@
           </div>
         </div>
       </section>
-      
-      <div class="portfolio-gallery" onclick="openModal()">
-        <div class="gallery-in">
-          <img src="images/portfolio/photo_2024-11-30 16.12.19.jpeg" alt="Фото 13">
-          <img src="images/portfolio/2024-11-13 11.47.49.jpg" alt="Фото 2">
-          <img src="images/portfolio/2024-11-13 11.48.17.jpg" alt="Фото 3">
-          <img src="images/portfolio/2024-11-13 11.48.21.jpg" alt="Фото 4">
-          <img src="images/portfolio/2024-11-13 11.48.27.jpg" alt="Фото 5">
-          <img src="images/portfolio/2024-11-13 11.48.31.jpg" alt="Фото 6">
-          <img src="images/portfolio/2024-11-13 11.48.38.jpg" alt="Фото 7">
-          <img src="images/portfolio/2024-11-13 11.48.46.jpg" alt="Фото 8">
-          <img src="images/portfolio/2024-11-13 11.49.04.jpg" alt="Фото 9">
-          <img src="images/portfolio/2024-11-13 11.49.10.jpg" alt="Фото 10">
-          <img src="images/portfolio/2024-11-13 11.49.17.jpg" alt="Фото 11">
-          <img src="images/portfolio/2024-11-13 11.49.42.jpg" alt="Фото 12">
-          <img src="images/portfolio/photo_2024-11-30 16.12.50.jpeg" alt="Фото 14">
-          <img src="images/portfolio/photo_2024-11-30 16.12.59.jpeg" alt="Фото 15">
-          <img src="images/portfolio/photo_2024-11-30 16.13.03.jpeg" alt="Фото 16">
-        </div>
-      </div>
       <section class="about-exp">
         <div class="container">
           <div class="exp-in">
@@ -389,7 +373,7 @@
                 </a>
               </div>
               <div class="top--right-box">
-                <h2>Используем <del>специальный</del> клей для обоев с высокой клеящей способностью
+                <h2>Используем <span>специальный</span> клей для обоев с высокой клеящей способностью
                 </h2>
                 <ul class="top--right-list left-list">
                   <h3>
@@ -482,7 +466,7 @@
         <div class="container">
           <div class="time-in">
             <div class="time-left">
-              <img src="images/last.png" alt="last">
+              <img src="images/portfolio/photo_2024-11-30 16.12.55.jpeg" alt="last">
             </div>
             <div class="time-right">
               <h2>
@@ -498,7 +482,7 @@
       <section class="new">
         <div class="container">
           <div class="new-in">
-            <h2>4 шага к вашим <span>новым</span>стенам</h2>
+            <h2>4 шага к вашим <span>новым</span> стенам</h2>
             <div class="new-cards">
               <div class="new-card">
                 <img src="images/icons/new-card1.png" alt="new-card">
@@ -559,21 +543,21 @@
                 <img src="images/logo.png" alt="website logo" />
               </li>
               <li class="navigation-list__item">
-                <a href="#" class="navigation-list__link">
-                  <img src="images/icons/whatsapp.png" alt="whatsapp" />
+                <a href="https://wa.me/79509986889?text=Hi" class="navigation-list__link" target="_blank">
+                  <img src="images/icons/whatsapp.png" alt="whatsapp"  />
                   <p>whatsapp</p>
                 </a>
-                <a href="#" class="navigation-list__link">
+                <a href="https://t.me/+79509986889" class="navigation-list__link" target="_blank">
                   <img src="images/icons/telegram.png" alt="telegram" />
                   <p>telegram</p>
                 </a>
               </li>
               <li class="navigation-list__item">
                 <div class="navigation-list__icons">
-                  <a href="#" class="navigation-last__icons">
+                  <a href="https://wa.me/79509986889?text=Hi" target="_blank" class="navigation-last__icons">
                     <img src="images/icons/whatsapp.png" alt="whatsapp" />
                   </a>
-                  <a href="#" class="navigation-last__icons">
+                  <a href="https://t.me/+79509986889" class="navigation-last__icons" target="_blank">
                     <img src="images/icons/telegram.png" alt="telegram" />
                   </a>
                 </div>
@@ -595,6 +579,7 @@
         <h4>Все права защищены. Информация на сайте не является публичной офертой. Нажимая кнопку «Отправить заявку», вы соглашаетесь с <a target="_blank" href="#">условиями</a> обработки персональных данных. ИП Абрамова Д.С ИНН 246504850312; емайл для связи: <a target="_blank" href="email:Dina.master2024@яндекс">Dina.master2024@яндекс</a></h4>
       </div>
     </footer>
+    
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
@@ -609,3 +594,4 @@
     <script src="js/script.js"></script>
   </body>
 </html>
+  
