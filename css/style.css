@@ -1407,6 +1407,9 @@ footer {
       height: 400px !important;
     }
   }
+  form {
+    width: 90% !important;
+  }
 }
 @media only screen and (max-width: 468px) {
   .advantages {
