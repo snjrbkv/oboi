@@ -1389,6 +1389,24 @@ footer {
   .exp-btn {
     display: flex !important;
   }
+  .connect-in {
+    background-image: url("../images/c6872b26ff50713df937c0c3a7b06924.png");
+    background-position: left center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.392);
+    .connect-card {
+      width: 100% !important;
+    }
+  }
+  .advantages-box:nth-child(4) {
+    flex: 0;
+    order: -5;
+  }
+  .portfolio-card {
+    img {
+      border-radius: 16px;
+      height: 400px !important;
+    }
+  }
 }
 @media only screen and (max-width: 468px) {
   .advantages {
@@ -1487,24 +1505,6 @@ footer {
     margin-top: 24px !important;
     text-align: center !important;
     width: 100%;
-  }
-  .connect-in {
-    background-image: url("../images/c6872b26ff50713df937c0c3a7b06924.png");
-    background-position: left center;
-    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.392);
-    .connect-card {
-      width: 100% !important;
-    }
-  }
-  .advantages-box:nth-child(4) {
-    flex: 0;
-    order: -5;
-  }
-  .portfolio-card {
-    img {
-      border-radius: 16px;
-      height: 400px !important;
-    }
   }
   .portfolio-text {
     margin: 0;
