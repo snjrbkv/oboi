@@ -1409,6 +1409,9 @@ footer {
   }
   form {
     width: 90% !important;
+    input {
+      width: 100% !important;
+    }
   }
 }
 @media only screen and (max-width: 468px) {
